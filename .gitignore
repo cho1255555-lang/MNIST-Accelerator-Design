@@ -1,0 +1,31 @@
+@"
+# Vivado project 
+*.cache/
+*.hw/
+*.runs/
+*.sim/
+*.gen/
+*.ip_user_files/
+.Xil/
+
+# simulation output
+xsim.dir/
+*.wdb
+*.pb
+webtalk*
+xelab.*
+xvlog.*
+xvhdl.*
+
+# log, journal, backup
+*.log
+*.jou
+*.str
+*.backup.*
+vivado_pid*
+
+# synthesis, result of synthesis
+*.dcp
+*.bit
+*.ltx
+"@ | Set-Content -Path .gitignore -Encoding utf8
