@@ -11,7 +11,7 @@
 ##Architecture
 
 
-#### 검증 방법
+#### issue
 
 
 #### Result
