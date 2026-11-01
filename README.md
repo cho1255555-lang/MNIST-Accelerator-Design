@@ -1,3 +1,11 @@
+# Contents
+- [Overview](#overview)
+- [Architecture](#architecture)
+- [Verification](#verification)
+- [Result](#result)
+- [Issues & Solutions](#issues--solutions)
+- [상세 설계 과정](#상세-설계-과정)
+  
 # Overview
 MLP 기반 MNIST 가속기를 분석하고 뉴런 단위로 병렬 연산하던 Fully Connected Layer를 4x4 Systolic Array 구조로 재설계하여 이미지 4개를 동시에 추론하도록 했습니다. 모듈 단위 Testbench로 각 모듈을 검증한 뒤 integrate하여 Layer별 연산 결과와 최종 추론 결과를 Reference Model과 비교해 일치 여부를 확인했습니다. 그 결과 동일한 정확도 91%를 유지하면서 LUT 45%, 전력 27%를 줄였고 추론 시간이 1.9배 늘어나는 자원 효율과 성능 간의 Trade-off를 분석했습니다.
 
@@ -116,6 +124,6 @@ Q5.11 누산 결과를 4bit 산술 Shift하여 8bit로 변환하고 표현 범�
 
 Fixed-point 연산에서는 각 데이터의 Q format을 정확히 해석해야 정보 손실 없이 Quantization할 수 있다는 것을 깨달음
 
-## 상세 설계 과정
+# 상세 설계 과정
 설계 및 디버깅 과정은 블로그에 정리했습니다.
 https://blog.naver.com/PostList.naver?from=postList&blogId=cho12555&categoryNo=1&currentPage=1
