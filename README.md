@@ -7,7 +7,7 @@
 - [상세 설계 과정](#상세-설계-과정)
   
 # Overview
-MLP 기반 MNIST 가속기를 분석하고 뉴런 단위로 병렬 연산하던 Fully Connected Layer를 4x4 Systolic Array 구조로 재설계하여 이미지 4개를 동시에 추론하도록 했습니다. 모듈 단위 Testbench로 각 모듈을 검증한 뒤 integrate하여 Layer별 연산 결과와 최종 추론 결과를 Reference Model과 비교해 일치 여부를 확인했습니다. 그 결과 동일한 정확도 91%를 유지하면서 LUT 45%, 전력 27%를 줄였고 추론 시간이 1.9배 늘어나는 자원 효율과 성능 간의 Trade-off를 분석했습니다.
+MLP 기반 MNIST 가속기를 분석하고 뉴런 단위로 연산하던 Fully Connected 구조를 4x4 Systolic Array 구조로 재설계하여 이미지 4개를 동시에 추론하도록 했습니다. 모듈 단위 Testbench로 각 모듈을 검증한 뒤 integrate하여 Layer별 연산 결과와 최종 추론 결과를 Reference Model과 비교해 일치 여부를 확인했습니다. 그 결과 추론 정확도를 동일하게 91%를 유지하면서 LUT 45%, 전력 27%를 줄었지만 추론 시간이 1.9배 늘어나는 결과를 얻어 자원 효율과 성능 간의 Trade-off를 분석했습니다.
 
 <img width="800" height="500" alt="image" src="https://github.com/user-attachments/assets/d0e21684-82b0-4321-96dc-425342c601a3" />
 
@@ -15,8 +15,8 @@ MLP 기반 MNIST 가속기를 분석하고 뉴런 단위로 병렬 연산하던 
 - Reference RTL의 Architecture와 Dataflow를 분석하고 각 모듈의 입출력을 재정의하여 Systolic Array 기반 구조로 재구성
 - 4x4 Systolic Array, 입력 Skew를 위한 Pipeline Register, Global Buffer, Weight/Bias Bank, FSM, ReLU, MaxFinder 설계
 - Systolic Array, Controller, ReLU 등 모듈별 Testbench로 Reference 계산값과 비교하는 단위 검증
-- Layer별 누산값, 출력값, Systolic Array 입력 데이터를 로그와 CSV로 Monitoring하여 Reference와 비교하며 RTL 디버깅
-- Test data 추론 결과를 Reference와 비교한 Pass/Fail CSV로 정리하고, Error rate와 숫자별 Fail 분포 분석
+- Layer별 누산값, 출력값, Systolic Array 입력 데이터를 로그와 CSV 파일로 Monitoring하여 Reference와 비교하며 RTL 디버깅
+- Test data 추론 결과를 Reference와 비교하는 Testbench를 통해 추론 Accuracy와 숫자별 Fail 분포 분석
 
 ## Language and Tools
 - Language: Verilog, SystemVerilog
@@ -64,7 +64,7 @@ MLP 기반 MNIST 가속기를 분석하고 뉴런 단위로 병렬 연산하던 
 ### Issue 1. Signed/Unsigned 해석 차이로 인한 Reference Mismatch
 **문제 상황**
 
-2x2 Systolic Array 단위 Testbench에서 FAIL이 발생했지만, waveform상 데이터 입력, shift, 누산은 모두 정상 동작함
+2x2 Systolic Array 데이터 검증 Testbench에서 FAIL이 발생했지만, waveform상 데이터 입력, shift, 누산은 모두 정상 동작함
 
 **분석**
 
