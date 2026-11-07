@@ -23,7 +23,10 @@ MLP 기반 MNIST 가속기를 분석하고 뉴런 단위로 연산하던 Fully C
 - Tools: Vivado 23.02
 
 # Architecture
-<img width="1280" height="720" alt="ppt31BB pptm  -  복구됨" src="https://github.com/user-attachments/assets/203a54fc-2749-41a7-b97c-8b53803620fa" />
+<img width="1280" height="720" alt="Reference" src="https://github.com/user-attachments/assets/02894c73-305f-49a4-801a-a57fe85eb9c0" />
+<img width="1280" height="720" alt="Proposed" src="https://github.com/user-attachments/assets/0d64da34-57a5-4660-b687-4c006ee6916f" />
+
+
 
 
 | 모듈 | 역할 |
