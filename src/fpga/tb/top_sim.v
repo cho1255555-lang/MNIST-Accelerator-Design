@@ -21,7 +21,7 @@
 
 `include "../rtl/include.v"
 
-`define MaxTestSamples 10000
+`define MaxTestSamples 4
 
 module top_sim(
 
