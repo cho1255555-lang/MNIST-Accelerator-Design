@@ -1,0 +1,262 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sat Oct 17 15:16:01 2026
+# Process ID: 19104
+# Current directory: C:/fpga_project/CS_MNIST/CS_MNIST
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18640 C:\fpga_project\CS_MNIST\CS_MNIST\CS_MNIST.xpr
+# Log file: C:/fpga_project/CS_MNIST/CS_MNIST/vivado.log
+# Journal file: C:/fpga_project/CS_MNIST/CS_MNIST\vivado.jou
+# Running On: LAPTOP-ER1BOQVS, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 16, Host memory: 16398 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
+open_project: Time (s): cpu = 00:00:31 ; elapsed = 00:00:21 . Memory (MB): peak = 1616.613 ; gain = 442.809
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'TB_NPU_Top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'TB_NPU_Top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj TB_NPU_Top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fpga_project/CS_MNIST/src/rtl/Global_Buffer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Global_Buffer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fpga_project/CS_MNIST/src/rtl/Mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fpga_project/CS_MNIST/src/rtl/NPU_TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NPU_Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Weight_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fpga_project/CS_MNIST/src/rtl/array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module array
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fpga_project/CS_MNIST/src/rtl/pipes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipes
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fpga_project/CS_MNIST/src/rtl/relu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module relu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bias_Bank
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga_project/CS_MNIST/src/rtl/MaxFinder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module maxFinder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga_project/CS_MNIST/src/rtl/Weight_Bank.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Weight_Bank
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fpga_project/CS_MNIST/src/tb/TB_NPU_TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB_NPU_Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_NPU_Top_behav xil_defaultlib.TB_NPU_Top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_NPU_Top_behav xil_defaultlib.TB_NPU_Top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 32 for port 'o_data' [C:/fpga_project/CS_MNIST/src/rtl/NPU_TOP.v:165]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/NPU_TOP.v" Line 2. Module NPU_Top_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/Weight_Bank.v" Line 2. Module Weight_Bank_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v" Line 3. Module Bias_Bank doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/Global_Buffer.v" Line 1. Module Global_Buffer_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/Mem.v" Line 1. Module Mem(DEPTH=64,ADW=6) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/Mem.v" Line 1. Module Mem(DEPTH=64,ADW=6) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/Mem.v" Line 1. Module Mem(DEPTH=64,ADW=6) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/Mem.v" Line 1. Module Mem(DEPTH=64,ADW=6) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/MaxFinder.v" Line 1. Module maxFinder(inputWidth=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/MaxFinder.v" Line 1. Module maxFinder(inputWidth=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/MaxFinder.v" Line 1. Module maxFinder(inputWidth=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/MaxFinder.v" Line 1. Module maxFinder(inputWidth=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/NPU_TOP.v" Line 2. Module NPU_Top_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/Weight_Bank.v" Line 2. Module Weight_Bank_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v" Line 3. Module Bias_Bank doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/Global_Buffer.v" Line 1. Module Global_Buffer_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/Mem.v" Line 1. Module Mem(DEPTH=64,ADW=6) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/Mem.v" Line 1. Module Mem(DEPTH=64,ADW=6) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/Mem.v" Line 1. Module Mem(DEPTH=64,ADW=6) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/Mem.v" Line 1. Module Mem(DEPTH=64,ADW=6) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/MaxFinder.v" Line 1. Module maxFinder(inputWidth=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/MaxFinder.v" Line 1. Module maxFinder(inputWidth=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/MaxFinder.v" Line 1. Module maxFinder(inputWidth=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/fpga_project/CS_MNIST/src/rtl/MaxFinder.v" Line 1. Module maxFinder(inputWidth=8) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=784,data...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=30,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=30,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=30,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=30,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=30,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=30,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=30,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=30,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=30,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=30,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=30,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=30,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=30,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=30,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=30,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=30,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=30,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=30,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=30,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=30,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=20,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=20,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=20,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=20,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=20,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=20,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=20,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=20,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=20,dataW...
+Compiling module xil_defaultlib.Weight_Memory(numWeight=20,dataW...
+Compiling module xil_defaultlib.Weight_Bank_default
+Compiling module xil_defaultlib.Bias_Bank
+Compiling module xil_defaultlib.pipes
+Compiling module xil_defaultlib.array(ROW=4,COL=4)
+Compiling module xil_defaultlib.relu
+Compiling module xil_defaultlib.Mem(DEPTH=64,ADW=6)
+Compiling module xil_defaultlib.Global_Buffer_default
+Compiling module xil_defaultlib.maxFinder(inputWidth=8)
+Compiling module xil_defaultlib.NPU_Top_default
+Compiling module xil_defaultlib.TB_NPU_Top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot TB_NPU_Top_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 1741.355 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '15' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TB_NPU_Top_behav -key {Behavioral:sim_1:Functional:TB_NPU_Top} -tclbatch {TB_NPU_Top.tcl} -view {C:/fpga_project/CS_MNIST/CS_MNIST/tb_systolic_array_2d_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/fpga_project/CS_MNIST/CS_MNIST/tb_systolic_array_2d_behav.wcfg
+WARNING: Simulation object /TB_NPU_Top/dut/cur_act_sel was not found in the design.
+WARNING: Simulation object /TB_NPU_Top/dut/au_in_psum was not found in the design.
+WARNING: Simulation object /TB_NPU_Top/dut/au_in_bias was not found in the design.
+WARNING: Simulation object /TB_NPU_Top/dut/pe_res_unpacked was not found in the design.
+WARNING: Simulation object /TB_NPU_Top/dut/bias_unpacked was not found in the design.
+source TB_NPU_Top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TB_NPU_Top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 1776.258 ; gain = 34.902
+run all
+
+============================================================
+[TB] Layer 1 Calculation Complete!
+[   37    0  127    0    0    0  127   18  127    0 
+     0    0    0  127    0  127    0    0    0    0 
+     0    0    0    0   88    0   42    0    0  127  ]
+============================================================
+
+
+============================================================
+[TB] Layer 2 Calculation Complete!
+[  127  127  127    0    0  127    0    0  127  108 
+   127  127   83    0   98    0  127  127    0  127  ]
+============================================================
+
+
+============================================================
+[TB] Layer 3 Calculation Complete!
+[    0    0    0    0    0    0    0  127    0    0  ]
+============================================================
+
+------------------------------------------------------------
+[TB] [Case 0] Result: z | Expected: 7
+[TB] >>> FAIL <<<
+------------------------------------------------------------
+[TB] [Case 1] Result: z | Expected: 2
+[TB] >>> FAIL <<<
+------------------------------------------------------------
+[TB] [Case 2] Result: z | Expected: 1
+[TB] >>> FAIL <<<
+------------------------------------------------------------
+[TB] [Case 3] Result: z | Expected: 0
+[TB] >>> FAIL <<<
+------------------------------------------------------------
+inference time :       67650 ns
+$finish called at time : 67875 ns : File "C:/fpga_project/CS_MNIST/src/tb/TB_NPU_TOP.v" Line 192
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 17 15:20:18 2026...

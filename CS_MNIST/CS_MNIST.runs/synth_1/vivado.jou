@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Mar 17 21:23:20 2026
+# Process ID: 27840
+# Current directory: c:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.runs/synth_1
+# Command line: vivado.exe -log NPU_Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source NPU_Top.tcl
+# Log file: c:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.runs/synth_1/NPU_Top.vds
+# Journal file: c:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.runs/synth_1\vivado.jou
+# Running On: LAPTOP-ER1BOQVS, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 16, Host memory: 16398 MB
+#-----------------------------------------------------------
+source NPU_Top.tcl -notrace

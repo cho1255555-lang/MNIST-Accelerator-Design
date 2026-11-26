@@ -1,0 +1,112 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Tue Mar 17 21:28:44 2026
+| Host         : LAPTOP-ER1BOQVS running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file NPU_Top_control_sets_placed.rpt
+| Design       : NPU_Top
+| Device       : xc7k70t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    34 |
+|    Minimum number of control sets                        |    34 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    63 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    34 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     5 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     4 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    21 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             303 |          108 |
+| No           | No                    | Yes                    |              11 |            9 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |            1935 |          609 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+---------------------------------------------+----------------------------+------------------+----------------+--------------+
+|  Clock Signal  |                Enable Signal                |      Set/Reset Signal      | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+---------------------------------------------+----------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | done_interrupt_i_1_n_0                      | sa/p_0_in                  |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | MAX_FINDER_GEN[2].mf/counter                | sa/p_0_in                  |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | MAX_FINDER_GEN[0].mf/E[0]                   | sa/p_0_in                  |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | MAX_FINDER_GEN[1].mf/counter                | sa/p_0_in                  |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | MAX_FINDER_GEN[3].mf/counter                | sa/p_0_in                  |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | MAX_FINDER_GEN[0].mf/counter                | sa/p_0_in                  |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | cur_neuron_total                            | sa/p_0_in                  |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | write_seq_cnt[4]_i_1_n_0                    | sa/p_0_in                  |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG |                                             | sa/p_0_in                  |                9 |             11 |         1.22 |
+|  clk_IBUF_BUFG | MAX_FINDER_GEN[1].mf/maxValue[7]_i_1__0_n_0 | sa/p_0_in                  |                3 |             12 |         4.00 |
+|  clk_IBUF_BUFG | MAX_FINDER_GEN[3].mf/maxValue[7]_i_1__2_n_0 | sa/p_0_in                  |                3 |             12 |         4.00 |
+|  clk_IBUF_BUFG | MAX_FINDER_GEN[2].mf/maxValue[7]_i_1__1_n_0 | sa/p_0_in                  |                2 |             12 |         6.00 |
+|  clk_IBUF_BUFG | MAX_FINDER_GEN[0].mf/maxValue[7]_i_1_n_0    | sa/p_0_in                  |                4 |             12 |         3.00 |
+|  clk_IBUF_BUFG | group_cnt                                   | sa/p_0_in                  |                6 |             30 |         5.00 |
+|  clk_IBUF_BUFG | mf_in_data[55]                              | sa/p_0_in                  |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | buf_wen_reg_n_0                             |                            |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG | k_cnt[31]_i_1_n_0                           | sa/p_0_in                  |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG | mf_in_data[23]                              | sa/p_0_in                  |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | mf_in_data[7]                               | sa/p_0_in                  |               10 |             32 |         3.20 |
+|  clk_IBUF_BUFG | mf_in_data[15]                              | sa/p_0_in                  |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | mf_in_data[79]                              | sa/p_0_in                  |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | mf_in_data[31]                              | sa/p_0_in                  |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | mf_in_data[63]                              | sa/p_0_in                  |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | mf_in_data[71]                              | sa/p_0_in                  |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG | mf_in_data[47]                              | sa/p_0_in                  |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG | mf_in_data[39]                              | sa/p_0_in                  |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | buf_w_data                                  | sa/p_0_in                  |               16 |             38 |         2.38 |
+|  clk_IBUF_BUFG | sys_col_in                                  | sa/p_0_in                  |               32 |             63 |         1.97 |
+|  clk_IBUF_BUFG | relu_gen[0].u_relu/E[0]                     | sa/p_0_in                  |               28 |            128 |         4.57 |
+|  clk_IBUF_BUFG | pi/wei_pipe40                               | sa/p_0_in                  |               29 |            159 |         5.48 |
+|  clk_IBUF_BUFG | pe_en_reg_n_0                               | sa/p_0_in                  |              119 |            252 |         2.12 |
+|  clk_IBUF_BUFG |                                             |                            |              108 |            303 |         2.81 |
+|  clk_IBUF_BUFG | mf_valid_pulse_reg_n_0                      | sa/p_0_in                  |               75 |            320 |         4.27 |
+|  clk_IBUF_BUFG | pe_en_reg_n_0                               | sa/d_psum[0][0][0]_i_2_n_0 |              128 |            512 |         4.00 |
++----------------+---------------------------------------------+----------------------------+------------------+----------------+--------------+
+
+

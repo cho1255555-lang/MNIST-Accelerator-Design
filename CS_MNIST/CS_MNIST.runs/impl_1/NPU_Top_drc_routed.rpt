@@ -1,0 +1,175 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Tue Mar 17 21:29:59 2026
+| Host         : LAPTOP-ER1BOQVS running 64-bit major release  (build 9200)
+| Command      : report_drc -file NPU_Top_drc_routed.rpt -pb NPU_Top_drc_routed.pb -rpx NPU_Top_drc_routed.rpx
+| Design       : NPU_Top
+| Device       : xc7k70tfbv676-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 25
++-----------+------------------+-----------------------------------------------------+------------+
+| Rule      | Severity         | Description                                         | Violations |
++-----------+------------------+-----------------------------------------------------+------------+
+| NSTD-1    | Critical Warning | Unspecified I/O Standard                            | 1          |
+| UCIO-1    | Critical Warning | Unconstrained Logical Port                          | 1          |
+| CFGBVS-1  | Warning          | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
+| CHECK-3   | Warning          | Report rule limit reached                           | 2          |
+| REQP-1840 | Warning          | RAMB18 async control check                          | 20         |
++-----------+------------------+-----------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+NSTD-1#1 Critical Warning
+Unspecified I/O Standard  
+68 out of 68 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: clk, done_interrupt, input_pixels[31:0], result[31:0], rst_n
+start_inference.
+Related violations: <none>
+
+UCIO-1#1 Critical Warning
+Unconstrained Logical Port  
+68 out of 68 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: clk, done_interrupt, input_pixels[31:0], result[31:0], rst_n
+start_inference.
+Related violations: <none>
+
+CFGBVS-1#1 Warning
+Missing CFGBVS and CONFIG_VOLTAGE Design Properties  
+Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+Related violations: <none>
+
+CHECK-3#1 Warning
+Report rule limit reached  
+REQP-1840 rule limit reached: 20 violations have been found.
+Related violations: <none>
+
+CHECK-3#2 Warning
+Report rule limit reached  
+REQP-1840 rule limit reached: 20 violations have been found.
+Related violations: <none>
+
+REQP-1840#1 Warning
+RAMB18 async control check  
+The RAMB18E1 wb/L1_MEM[10].wm/wout_reg has an input control pin wb/L1_MEM[10].wm/wout_reg/ADDRARDADDR[13] (net: wb/L1_MEM[10].wm/ADDRARDADDR[3]) which is driven by a register (cur_input_len_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#2 Warning
+RAMB18 async control check  
+The RAMB18E1 wb/L1_MEM[10].wm/wout_reg has an input control pin wb/L1_MEM[10].wm/wout_reg/ADDRARDADDR[13] (net: wb/L1_MEM[10].wm/ADDRARDADDR[3]) which is driven by a register (cur_input_len_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#3 Warning
+RAMB18 async control check  
+The RAMB18E1 wb/L1_MEM[10].wm/wout_reg has an input control pin wb/L1_MEM[10].wm/wout_reg/ADDRARDADDR[13] (net: wb/L1_MEM[10].wm/ADDRARDADDR[3]) which is driven by a register (cur_input_len_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#4 Warning
+RAMB18 async control check  
+The RAMB18E1 wb/L1_MEM[10].wm/wout_reg has an input control pin wb/L1_MEM[10].wm/wout_reg/ADDRARDADDR[13] (net: wb/L1_MEM[10].wm/ADDRARDADDR[3]) which is driven by a register (cur_input_len_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#5 Warning
+RAMB18 async control check  
+The RAMB18E1 wb/L1_MEM[10].wm/wout_reg has an input control pin wb/L1_MEM[10].wm/wout_reg/ADDRARDADDR[13] (net: wb/L1_MEM[10].wm/ADDRARDADDR[3]) which is driven by a register (k_cnt_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#6 Warning
+RAMB18 async control check  
+The RAMB18E1 wb/L1_MEM[25].wm/wout_reg has an input control pin wb/L1_MEM[25].wm/wout_reg/ADDRARDADDR[13] (net: wb/L1_MEM[25].wm/ADDRARDADDR[3]) which is driven by a register (cur_input_len_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#7 Warning
+RAMB18 async control check  
+The RAMB18E1 wb/L1_MEM[25].wm/wout_reg has an input control pin wb/L1_MEM[25].wm/wout_reg/ADDRARDADDR[13] (net: wb/L1_MEM[25].wm/ADDRARDADDR[3]) which is driven by a register (cur_input_len_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#8 Warning
+RAMB18 async control check  
+The RAMB18E1 wb/L1_MEM[25].wm/wout_reg has an input control pin wb/L1_MEM[25].wm/wout_reg/ADDRARDADDR[13] (net: wb/L1_MEM[25].wm/ADDRARDADDR[3]) which is driven by a register (cur_input_len_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#9 Warning
+RAMB18 async control check  
+The RAMB18E1 wb/L1_MEM[25].wm/wout_reg has an input control pin wb/L1_MEM[25].wm/wout_reg/ADDRARDADDR[13] (net: wb/L1_MEM[25].wm/ADDRARDADDR[3]) which is driven by a register (cur_input_len_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#10 Warning
+RAMB18 async control check  
+The RAMB18E1 wb/L1_MEM[25].wm/wout_reg has an input control pin wb/L1_MEM[25].wm/wout_reg/ADDRARDADDR[13] (net: wb/L1_MEM[25].wm/ADDRARDADDR[3]) which is driven by a register (k_cnt_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#11 Warning
+RAMB18 async control check  
+The RAMB18E1 wb/L1_MEM[25].wm/wout_reg has an input control pin wb/L1_MEM[25].wm/wout_reg/ADDRARDADDR[13] (net: wb/L1_MEM[25].wm/ADDRARDADDR[3]) which is driven by a register (k_cnt_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#12 Warning
+RAMB18 async control check  
+The RAMB18E1 wb/L1_MEM[25].wm/wout_reg has an input control pin wb/L1_MEM[25].wm/wout_reg/ADDRARDADDR[13] (net: wb/L1_MEM[25].wm/ADDRARDADDR[3]) which is driven by a register (k_cnt_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#13 Warning
+RAMB18 async control check  
+The RAMB18E1 wb/L1_MEM[25].wm/wout_reg has an input control pin wb/L1_MEM[25].wm/wout_reg/ADDRARDADDR[13] (net: wb/L1_MEM[25].wm/ADDRARDADDR[3]) which is driven by a register (k_cnt_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#14 Warning
+RAMB18 async control check  
+The RAMB18E1 wb/L1_MEM[25].wm/wout_reg has an input control pin wb/L1_MEM[25].wm/wout_reg/ADDRARDADDR[13] (net: wb/L1_MEM[25].wm/ADDRARDADDR[3]) which is driven by a register (k_cnt_reg[13]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#15 Warning
+RAMB18 async control check  
+The RAMB18E1 wb/L1_MEM[25].wm/wout_reg has an input control pin wb/L1_MEM[25].wm/wout_reg/ADDRARDADDR[13] (net: wb/L1_MEM[25].wm/ADDRARDADDR[3]) which is driven by a register (k_cnt_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#16 Warning
+RAMB18 async control check  
+The RAMB18E1 wb/L1_MEM[25].wm/wout_reg has an input control pin wb/L1_MEM[25].wm/wout_reg/ADDRARDADDR[13] (net: wb/L1_MEM[25].wm/ADDRARDADDR[3]) which is driven by a register (k_cnt_reg[20]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#17 Warning
+RAMB18 async control check  
+The RAMB18E1 wb/L1_MEM[25].wm/wout_reg has an input control pin wb/L1_MEM[25].wm/wout_reg/ADDRARDADDR[13] (net: wb/L1_MEM[25].wm/ADDRARDADDR[3]) which is driven by a register (k_cnt_reg[25]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#18 Warning
+RAMB18 async control check  
+The RAMB18E1 wb/L1_MEM[25].wm/wout_reg has an input control pin wb/L1_MEM[25].wm/wout_reg/ADDRARDADDR[13] (net: wb/L1_MEM[25].wm/ADDRARDADDR[3]) which is driven by a register (k_cnt_reg[27]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#19 Warning
+RAMB18 async control check  
+The RAMB18E1 wb/L1_MEM[25].wm/wout_reg has an input control pin wb/L1_MEM[25].wm/wout_reg/ADDRARDADDR[13] (net: wb/L1_MEM[25].wm/ADDRARDADDR[3]) which is driven by a register (k_cnt_reg[29]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#20 Warning
+RAMB18 async control check  
+The RAMB18E1 wb/L1_MEM[25].wm/wout_reg has an input control pin wb/L1_MEM[25].wm/wout_reg/ADDRARDADDR[13] (net: wb/L1_MEM[25].wm/ADDRARDADDR[3]) which is driven by a register (k_cnt_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+

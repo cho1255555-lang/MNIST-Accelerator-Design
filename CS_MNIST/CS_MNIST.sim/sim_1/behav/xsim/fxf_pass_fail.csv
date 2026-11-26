@@ -1,0 +1,5 @@
+test_idx,golden,result,check
+          0,  7,  z,@aa`
+          1,  2,  z,@aa`
+          2,  1,  z,@aa`
+          3,  0,  z,@aa`

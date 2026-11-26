@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sat Oct 17 16:30:35 2026
+# Process ID: 23836
+# Current directory: C:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.sim/sim_1/behav/xsim
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15400 C:\fpga_project\CS_MNIST\CS_MNIST\CS_MNIST.sim\sim_1\behav\xsim\TB_NPU_Top_behav.wdb
+# Log file: C:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.sim/sim_1/behav/xsim/vivado.log
+# Journal file: C:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.sim/sim_1/behav/xsim\vivado.jou
+# Running On: LAPTOP-ER1BOQVS, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 16, Host memory: 16398 MB
+#-----------------------------------------------------------
+start_gui
+open_wave_database {C:\fpga_project\CS_MNIST\CS_MNIST\CS_MNIST.sim\sim_1\behav\xsim\TB_NPU_Top_behav.wdb}

@@ -1,0 +1,25 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,uvm,,,,,,
+C:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.sim/sim_1/behav/xsim/include.v,1769515399,verilog,,,,,,,,,,,,
+C:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v,1769867339,systemVerilog,,C:/fpga_project/CS_MNIST/src/rtl/MaxFinder.v,C:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.sim/sim_1/behav/xsim/include.v,Bias_Bank,,uvm,,,,,,
+C:/fpga_project/CS_MNIST/src/rtl/Global_Buffer.v,1769846914,verilog,,C:/fpga_project/CS_MNIST/src/rtl/Mem.v,,Global_Buffer,,uvm,,,,,,
+C:/fpga_project/CS_MNIST/src/rtl/MaxFinder.v,1770136918,systemVerilog,,C:/fpga_project/CS_MNIST/src/rtl/Weight_Bank.v,,maxFinder,,uvm,,,,,,
+C:/fpga_project/CS_MNIST/src/rtl/Mem.v,1769578904,verilog,,C:/fpga_project/CS_MNIST/src/rtl/NPU_TOP.v,,Mem,,uvm,,,,,,
+C:/fpga_project/CS_MNIST/src/rtl/NPU_TOP.v,1773750188,verilog,,C:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v,C:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.sim/sim_1/behav/xsim/include.v,NPU_Top,,uvm,,,,,,
+C:/fpga_project/CS_MNIST/src/rtl/Weight_Bank.v,1771490601,systemVerilog,,,C:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.sim/sim_1/behav/xsim/include.v,Weight_Bank,,uvm,,,,,,
+C:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v,1769587607,verilog,,C:/fpga_project/CS_MNIST/src/rtl/array.v,,Weight_Memory,,uvm,,,,,,
+C:/fpga_project/CS_MNIST/src/rtl/array.v,1769870922,verilog,,C:/fpga_project/CS_MNIST/src/rtl/pipes.v,,array,,uvm,,,,,,
+C:/fpga_project/CS_MNIST/src/rtl/pipes.v,1769930491,verilog,,C:/fpga_project/CS_MNIST/src/rtl/relu.v,,pipes,,uvm,,,,,,
+C:/fpga_project/CS_MNIST/src/rtl/relu.v,1773750171,verilog,,,,relu,,uvm,,,,,,
+C:/fpga_project/CS_MNIST/src/tb/TB_NPU_TOP.v,1792224283,verilog,,,C:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.sim/sim_1/behav/xsim/include.v,TB_NPU_Top,,uvm,,,,,,
+c:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.sim/sim_1/behav/xsim/include.v,1769515399,verilog,,,,,,,,,,,,
+c:/fpga_project/CS_MNIST/src/rtl/array_controller.v,1769596482,verilog,,c:/fpga_project/CS_MNIST/src/rtl/relu.v,,array_controller,,uvm,,,,,,
+c:/fpga_project/CS_MNIST/src/rtl/array_controller_relu.v,1769747461,verilog,,c:/fpga_project/CS_MNIST/src/rtl/ex_relu.v,,array_controller_relu,,uvm,,,,,,
+c:/fpga_project/CS_MNIST/src/rtl/ex_relu.v,1769747533,verilog,,,,ex_relu,,uvm,,,,,,
+c:/fpga_project/CS_MNIST/src/tb/tb_pe_chain.sv,1768443485,systemVerilog,,,,tb_systolic_array_2d,,uvm,,,,,,
+c:/fpga_project/CS_MNIST/src/tb/tb_pe_chain2.sv,1768902756,systemVerilog,,,,tb_pe_chain2,,uvm,,,,,,
+c:/fpga_project/CS_MNIST/src/tb/tb_systolic_controller.sv,1769000131,systemVerilog,,,,tb_systolic_controller,,uvm,,,,,,
+c:/fpga_project/CS_MNIST/src/tb/tb_systolic_controller_relu.sv,1769468336,systemVerilog,,,,tb_systolic_controller_relu,,uvm,,,,,,

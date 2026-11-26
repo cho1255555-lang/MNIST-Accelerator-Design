@@ -1,0 +1,23 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../src/rtl/Global_Buffer.v" \
+"../../../../../src/rtl/Mem.v" \
+"../../../../../src/rtl/NPU_TOP.v" \
+"../../../../../src/rtl/Weight_Memory.v" \
+"../../../../../src/rtl/array.v" \
+"../../../../../src/rtl/pipes.v" \
+"../../../../../src/rtl/relu.v" \
+
+sv xil_defaultlib  \
+"../../../../../src/rtl/Bias_Bank.v" \
+"../../../../../src/rtl/MaxFinder.v" \
+"../../../../../src/rtl/Weight_Bank.v" \
+
+verilog xil_defaultlib  \
+"../../../../../src/tb/TB_NPU_TOP.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

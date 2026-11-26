@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TB_NPU_Top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TB_NPU_Top" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="8,019.917 ns"></ZoomStartTime>
+      <ZoomEndTime time="8,110.418 ns"></ZoomEndTime>
+      <Cursor1Time time="8,065.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="348"></NameColumnWidth>
+      <ValueColumnWidth column_width="116"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="65" />
+   <wvobject fp_name="/TB_NPU_Top/dut/state" type="array">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/start_inference" type="logic">
+      <obj_property name="ElementShortName">start_inference</obj_property>
+      <obj_property name="ObjectShortName">start_inference</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/input_pixels" type="array">
+      <obj_property name="ElementShortName">input_pixels[31:0]</obj_property>
+      <obj_property name="ObjectShortName">input_pixels[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/input_valid" type="logic">
+      <obj_property name="ElementShortName">input_valid</obj_property>
+      <obj_property name="ObjectShortName">input_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/done_interrupt" type="logic">
+      <obj_property name="ElementShortName">done_interrupt</obj_property>
+      <obj_property name="ObjectShortName">done_interrupt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/result_class_0" type="array">
+      <obj_property name="ElementShortName">result_class_0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result_class_0[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/result_class_1" type="array">
+      <obj_property name="ElementShortName">result_class_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result_class_1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/result_class_2" type="array">
+      <obj_property name="ElementShortName">result_class_2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result_class_2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/result_class_3" type="array">
+      <obj_property name="ElementShortName">result_class_3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result_class_3[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/state" type="array">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/k_cnt" type="array">
+      <obj_property name="ElementShortName">k_cnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">k_cnt[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/group_cnt" type="array">
+      <obj_property name="ElementShortName">group_cnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">group_cnt[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/write_seq_cnt" type="array">
+      <obj_property name="ElementShortName">write_seq_cnt[4:0]</obj_property>
+      <obj_property name="ObjectShortName">write_seq_cnt[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/cur_layer_num" type="array">
+      <obj_property name="ElementShortName">cur_layer_num[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cur_layer_num[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/cur_input_len" type="array">
+      <obj_property name="ElementShortName">cur_input_len[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cur_input_len[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/cur_neuron_total" type="array">
+      <obj_property name="ElementShortName">cur_neuron_total[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cur_neuron_total[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/cur_act_sel" type="logic">
+      <obj_property name="ElementShortName">cur_act_sel</obj_property>
+      <obj_property name="ObjectShortName">cur_act_sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/pe_rst" type="logic">
+      <obj_property name="ElementShortName">pe_rst</obj_property>
+      <obj_property name="ObjectShortName">pe_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/pe_en" type="logic">
+      <obj_property name="ElementShortName">pe_en</obj_property>
+      <obj_property name="ObjectShortName">pe_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/calc_done" type="logic">
+      <obj_property name="ElementShortName">calc_done</obj_property>
+      <obj_property name="ObjectShortName">calc_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/relu_bias_load" type="logic">
+      <obj_property name="ElementShortName">relu_bias_load</obj_property>
+      <obj_property name="ObjectShortName">relu_bias_load</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/array_out" type="array">
+      <obj_property name="ElementShortName">array_out[511:0]</obj_property>
+      <obj_property name="ObjectShortName">array_out[511:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/i_sa_act" type="array">
+      <obj_property name="ElementShortName">i_sa_act[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_sa_act[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/i_sa_wei" type="array">
+      <obj_property name="ElementShortName">i_sa_wei[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_sa_wei[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/sys_col_in" type="array">
+      <obj_property name="ElementShortName">sys_col_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sys_col_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/sys_row_in" type="array">
+      <obj_property name="ElementShortName">sys_row_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sys_row_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/w_bank_out" type="array">
+      <obj_property name="ElementShortName">w_bank_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w_bank_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/b_bank_out" type="array">
+      <obj_property name="ElementShortName">b_bank_out[63:0]</obj_property>
+      <obj_property name="ObjectShortName">b_bank_out[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/buf_wen" type="logic">
+      <obj_property name="ElementShortName">buf_wen</obj_property>
+      <obj_property name="ObjectShortName">buf_wen</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/buf_w_addr" type="array">
+      <obj_property name="ElementShortName">buf_w_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">buf_w_addr[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/buf_w_data" type="array">
+      <obj_property name="ElementShortName">buf_w_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">buf_w_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/wr_global_neuron_idx" type="array">
+      <obj_property name="ElementShortName">wr_global_neuron_idx[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_global_neuron_idx[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/buf_r_addr" type="array">
+      <obj_property name="ElementShortName">buf_r_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">buf_r_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/buf_r_data" type="array">
+      <obj_property name="ElementShortName">buf_r_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">buf_r_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/w_r_addr" type="array">
+      <obj_property name="ElementShortName">w_r_addr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">w_r_addr[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/au_in_psum" type="array">
+      <obj_property name="ElementShortName">au_in_psum[15:0]</obj_property>
+      <obj_property name="ObjectShortName">au_in_psum[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/au_in_bias" type="array">
+      <obj_property name="ElementShortName">au_in_bias[15:0]</obj_property>
+      <obj_property name="ObjectShortName">au_in_bias[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/act_out_val" type="array">
+      <obj_property name="ElementShortName">act_out_val[127:0]</obj_property>
+      <obj_property name="ObjectShortName">act_out_val[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/pe_res_unpacked" type="array">
+      <obj_property name="ElementShortName">pe_res_unpacked[3:0][3:0][15:0]</obj_property>
+      <obj_property name="ObjectShortName">pe_res_unpacked[3:0][3:0][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/bias_unpacked" type="array">
+      <obj_property name="ElementShortName">bias_unpacked[3:0][15:0]</obj_property>
+      <obj_property name="ObjectShortName">bias_unpacked[3:0][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/debug_mul_00" type="array">
+      <obj_property name="ElementShortName">debug_mul_00[15:0]</obj_property>
+      <obj_property name="ObjectShortName">debug_mul_00[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/in_img_idx" type="array">
+      <obj_property name="ElementShortName">in_img_idx[1:0]</obj_property>
+      <obj_property name="ObjectShortName">in_img_idx[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/in_neu_idx" type="array">
+      <obj_property name="ElementShortName">in_neu_idx[1:0]</obj_property>
+      <obj_property name="ObjectShortName">in_neu_idx[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/delayed_seq_cnt" type="array">
+      <obj_property name="ElementShortName">delayed_seq_cnt[4:0]</obj_property>
+      <obj_property name="ObjectShortName">delayed_seq_cnt[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/wr_img_idx" type="array">
+      <obj_property name="ElementShortName">wr_img_idx[1:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_img_idx[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/wr_neu_idx" type="array">
+      <obj_property name="ElementShortName">wr_neu_idx[1:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_neu_idx[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/mf_in_data" type="array">
+      <obj_property name="ElementShortName">mf_in_data[3:0][79:0]</obj_property>
+      <obj_property name="ObjectShortName">mf_in_data[3:0][79:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/mf_valid_pulse" type="logic">
+      <obj_property name="ElementShortName">mf_valid_pulse</obj_property>
+      <obj_property name="ObjectShortName">mf_valid_pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/mf_out" type="array">
+      <obj_property name="ElementShortName">mf_out[3:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">mf_out[3:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/mf_out_valid" type="array">
+      <obj_property name="ElementShortName">mf_out_valid[3:0]</obj_property>
+      <obj_property name="ObjectShortName">mf_out_valid[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/DW" type="array">
+      <obj_property name="ElementShortName">DW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DW[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/ADW" type="array">
+      <obj_property name="ElementShortName">ADW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ADW[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/ROW" type="array">
+      <obj_property name="ElementShortName">ROW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ROW[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/COL" type="array">
+      <obj_property name="ElementShortName">COL[31:0]</obj_property>
+      <obj_property name="ObjectShortName">COL[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/IDLE" type="array">
+      <obj_property name="ElementShortName">IDLE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IDLE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/CALC_L1" type="array">
+      <obj_property name="ElementShortName">CALC_L1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CALC_L1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/BUFFER_WR_L1" type="array">
+      <obj_property name="ElementShortName">BUFFER_WR_L1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BUFFER_WR_L1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/CALC_L2" type="array">
+      <obj_property name="ElementShortName">CALC_L2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CALC_L2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/BUFFER_WR_L2" type="array">
+      <obj_property name="ElementShortName">BUFFER_WR_L2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BUFFER_WR_L2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/CALC_L3" type="array">
+      <obj_property name="ElementShortName">CALC_L3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CALC_L3[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/BUFFER_WR_L3" type="array">
+      <obj_property name="ElementShortName">BUFFER_WR_L3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BUFFER_WR_L3[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/OUTPUT_SCAN" type="array">
+      <obj_property name="ElementShortName">OUTPUT_SCAN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">OUTPUT_SCAN[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_NPU_Top/dut/DONE" type="array">
+      <obj_property name="ElementShortName">DONE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DONE[31:0]</obj_property>
+   </wvobject>
+</wave_config>

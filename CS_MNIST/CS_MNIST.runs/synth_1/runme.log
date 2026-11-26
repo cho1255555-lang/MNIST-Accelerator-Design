@@ -1,0 +1,994 @@
+
+*** Running vivado
+    with args -log NPU_Top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source NPU_Top.tcl
+
+
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source NPU_Top.tcl -notrace
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 548.781 ; gain = 181.926
+Command: read_checkpoint -auto_incremental -incremental c:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.srcs/utils_1/imports/synth_1/NPU_Top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from c:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.srcs/utils_1/imports/synth_1/NPU_Top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top NPU_Top -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 51696
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1383.777 ; gain = 440.840
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'result_class_0', assumed default net type 'wire' [c:/fpga_project/CS_MNIST/src/rtl/NPU_TOP.v:170]
+INFO: [Synth 8-11241] undeclared symbol 'result_class_1', assumed default net type 'wire' [c:/fpga_project/CS_MNIST/src/rtl/NPU_TOP.v:171]
+INFO: [Synth 8-11241] undeclared symbol 'result_class_2', assumed default net type 'wire' [c:/fpga_project/CS_MNIST/src/rtl/NPU_TOP.v:172]
+INFO: [Synth 8-11241] undeclared symbol 'result_class_3', assumed default net type 'wire' [c:/fpga_project/CS_MNIST/src/rtl/NPU_TOP.v:173]
+INFO: [Synth 8-6157] synthesizing module 'NPU_Top' [c:/fpga_project/CS_MNIST/src/rtl/NPU_TOP.v:2]
+INFO: [Synth 8-6157] synthesizing module 'relu' [c:/fpga_project/CS_MNIST/src/rtl/relu.v:1]
+	Parameter ADW bound to: 32 - type: integer 
+	Parameter DW bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'relu' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/relu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'maxFinder' [c:/fpga_project/CS_MNIST/src/rtl/MaxFinder.v:1]
+	Parameter numInput bound to: 10 - type: integer 
+	Parameter inputWidth bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'maxFinder' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/MaxFinder.v:1]
+WARNING: [Synth 8-689] width (8) of port connection 'o_data' does not match port width (32) of module 'maxFinder' [c:/fpga_project/CS_MNIST/src/rtl/NPU_TOP.v:165]
+WARNING: [Synth 8-689] width (8) of port connection 'o_data' does not match port width (32) of module 'maxFinder' [c:/fpga_project/CS_MNIST/src/rtl/NPU_TOP.v:165]
+WARNING: [Synth 8-689] width (8) of port connection 'o_data' does not match port width (32) of module 'maxFinder' [c:/fpga_project/CS_MNIST/src/rtl/NPU_TOP.v:165]
+WARNING: [Synth 8-689] width (8) of port connection 'o_data' does not match port width (32) of module 'maxFinder' [c:/fpga_project/CS_MNIST/src/rtl/NPU_TOP.v:165]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Bank' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Bank.v:2]
+	Parameter dataWidth bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_0.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_0.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized0' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_1.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_1.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized0' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized1' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_2.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_2.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized1' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized2' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_3.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_3.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized2' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized3' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_4.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_4.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized3' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized4' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_5.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_5.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized4' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized5' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_6.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_6.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized5' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized6' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_7.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_7.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized6' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized7' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_8.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_8.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized7' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized8' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_9.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_9.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized8' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized9' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_10.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_10.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized9' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized10' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_11.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_11.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized10' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized11' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_12.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_12.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized11' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized12' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_13.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_13.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized12' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized13' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_14.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_14.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized13' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized14' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_15.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_15.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized14' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized15' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_16.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_16.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized15' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized16' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_17.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_17.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized16' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized17' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_18.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_18.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized17' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized18' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_19.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_19.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized18' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized19' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_20.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_20.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized19' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized20' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_21.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_21.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized20' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized21' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_22.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_22.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized21' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized22' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_23.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_23.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized22' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized23' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_24.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_24.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized23' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized24' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_25.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_25.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized24' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized25' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_26.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_26.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized25' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized26' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_27.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_27.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized26' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized27' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_28.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_28.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized27' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized28' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 784 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_1_29.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_1_29.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized28' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized29' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 30 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_2_0.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_2_0.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized29' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized30' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 30 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_2_1.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_2_1.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized30' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized31' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 30 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_2_2.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_2_2.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized31' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized32' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 30 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_2_3.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_2_3.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized32' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized33' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 30 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_2_4.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_2_4.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized33' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized34' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 30 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_2_5.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_2_5.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized34' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized35' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 30 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_2_6.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_2_6.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized35' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized36' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 30 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_2_7.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_2_7.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized36' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized37' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 30 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_2_8.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_2_8.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized37' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized38' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 30 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_2_9.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_2_9.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized38' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized39' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 30 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_2_10.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_2_10.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized39' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized40' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 30 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_2_11.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_2_11.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized40' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized41' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 30 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_2_12.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_2_12.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized41' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized42' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 30 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_2_13.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_2_13.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized42' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized43' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 30 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_2_14.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_2_14.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized43' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized44' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 30 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_2_15.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_2_15.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized44' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized45' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 30 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_2_16.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_2_16.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized45' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized46' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 30 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_2_17.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_2_17.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized46' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized47' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 30 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_2_18.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_2_18.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized47' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized48' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 30 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_2_19.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_2_19.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized48' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized49' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 20 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_3_0.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_3_0.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized49' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized50' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 20 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_3_1.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_3_1.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized50' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized51' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 20 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_3_2.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_3_2.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized51' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized52' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 20 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_3_3.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_3_3.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized52' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized53' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 20 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_3_4.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_3_4.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized53' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized54' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 20 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_3_5.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_3_5.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized54' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized55' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 20 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_3_6.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_3_6.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized55' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized56' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 20 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_3_7.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_3_7.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized56' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized57' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 20 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_3_8.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_3_8.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized57' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Weight_Memory__parameterized58' [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+	Parameter numWeight bound to: 20 - type: integer 
+	Parameter dataWidth bound to: 8 - type: integer 
+	Parameter weightFile bound to: ./weight_mif/w_3_9.mif - type: string 
+INFO: [Synth 8-3876] $readmem data file './weight_mif/w_3_9.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Memory__parameterized58' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Memory.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Weight_Bank' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Weight_Bank.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Bias_Bank' [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:3]
+	Parameter dataWidth bound to: 8 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_0.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_1.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_2.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_3.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_4.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_5.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_6.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_7.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_8.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_9.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_10.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_11.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_12.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_13.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_14.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_15.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_16.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_17.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_18.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_19.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_20.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_21.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_22.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_23.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_24.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_25.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_26.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_27.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_28.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_1_29.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:22]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_2_0.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:30]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_2_1.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:30]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_2_2.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:30]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_2_3.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:30]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_2_4.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:30]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_2_5.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:30]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_2_6.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:30]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_2_7.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:30]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_2_8.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:30]
+INFO: [Synth 8-3876] $readmem data file './bias_mif/b_2_9.mif' is read successfully [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:30]
+INFO: [Common 17-14] Message 'Synth 8-3876' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-155] case statement is not full and has no default [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'Bias_Bank' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Bias_Bank.v:3]
+INFO: [Synth 8-6157] synthesizing module 'pipes' [c:/fpga_project/CS_MNIST/src/rtl/pipes.v:1]
+	Parameter DW bound to: 8 - type: integer 
+	Parameter ROW bound to: 4 - type: integer 
+	Parameter COL bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pipes' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/pipes.v:1]
+INFO: [Synth 8-6157] synthesizing module 'array' [c:/fpga_project/CS_MNIST/src/rtl/array.v:1]
+	Parameter DW bound to: 8 - type: integer 
+	Parameter ROW bound to: 4 - type: integer 
+	Parameter COL bound to: 4 - type: integer 
+	Parameter ADW bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'array' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/array.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Global_Buffer' [c:/fpga_project/CS_MNIST/src/rtl/Global_Buffer.v:1]
+	Parameter DW bound to: 8 - type: integer 
+	Parameter ROW bound to: 4 - type: integer 
+	Parameter COL bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Mem' [c:/fpga_project/CS_MNIST/src/rtl/Mem.v:1]
+	Parameter DW bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 64 - type: integer 
+	Parameter ADW bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Mem' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Mem.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Global_Buffer' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/Global_Buffer.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/fpga_project/CS_MNIST/src/rtl/NPU_TOP.v:206]
+INFO: [Synth 8-6155] done synthesizing module 'NPU_Top' (0#1) [c:/fpga_project/CS_MNIST/src/rtl/NPU_TOP.v:2]
+WARNING: [Synth 8-7129] Port wen in module Weight_Memory__parameterized58 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[9] in module Weight_Memory__parameterized58 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[8] in module Weight_Memory__parameterized58 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[7] in module Weight_Memory__parameterized58 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[6] in module Weight_Memory__parameterized58 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[5] in module Weight_Memory__parameterized58 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[4] in module Weight_Memory__parameterized58 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[3] in module Weight_Memory__parameterized58 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[2] in module Weight_Memory__parameterized58 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[1] in module Weight_Memory__parameterized58 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[0] in module Weight_Memory__parameterized58 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[7] in module Weight_Memory__parameterized58 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[6] in module Weight_Memory__parameterized58 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[5] in module Weight_Memory__parameterized58 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[4] in module Weight_Memory__parameterized58 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[3] in module Weight_Memory__parameterized58 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[2] in module Weight_Memory__parameterized58 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[1] in module Weight_Memory__parameterized58 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[0] in module Weight_Memory__parameterized58 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wen in module Weight_Memory__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[9] in module Weight_Memory__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[8] in module Weight_Memory__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[7] in module Weight_Memory__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[6] in module Weight_Memory__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[5] in module Weight_Memory__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[4] in module Weight_Memory__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[3] in module Weight_Memory__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[2] in module Weight_Memory__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[1] in module Weight_Memory__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[0] in module Weight_Memory__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[7] in module Weight_Memory__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[6] in module Weight_Memory__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[5] in module Weight_Memory__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[4] in module Weight_Memory__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[3] in module Weight_Memory__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[2] in module Weight_Memory__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[1] in module Weight_Memory__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[0] in module Weight_Memory__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wen in module Weight_Memory__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[9] in module Weight_Memory__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[8] in module Weight_Memory__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[7] in module Weight_Memory__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[6] in module Weight_Memory__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[5] in module Weight_Memory__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[4] in module Weight_Memory__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[3] in module Weight_Memory__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[2] in module Weight_Memory__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[1] in module Weight_Memory__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[0] in module Weight_Memory__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[7] in module Weight_Memory__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[6] in module Weight_Memory__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[5] in module Weight_Memory__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[4] in module Weight_Memory__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[3] in module Weight_Memory__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[2] in module Weight_Memory__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[1] in module Weight_Memory__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[0] in module Weight_Memory__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wen in module Weight_Memory__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[9] in module Weight_Memory__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[8] in module Weight_Memory__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[7] in module Weight_Memory__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[6] in module Weight_Memory__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[5] in module Weight_Memory__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[4] in module Weight_Memory__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[3] in module Weight_Memory__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[2] in module Weight_Memory__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[1] in module Weight_Memory__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[0] in module Weight_Memory__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[7] in module Weight_Memory__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[6] in module Weight_Memory__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[5] in module Weight_Memory__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[4] in module Weight_Memory__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[3] in module Weight_Memory__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[2] in module Weight_Memory__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[1] in module Weight_Memory__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[0] in module Weight_Memory__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wen in module Weight_Memory__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[9] in module Weight_Memory__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[8] in module Weight_Memory__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[7] in module Weight_Memory__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[6] in module Weight_Memory__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[5] in module Weight_Memory__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[4] in module Weight_Memory__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[3] in module Weight_Memory__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[2] in module Weight_Memory__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[1] in module Weight_Memory__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[0] in module Weight_Memory__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[7] in module Weight_Memory__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[6] in module Weight_Memory__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[5] in module Weight_Memory__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[4] in module Weight_Memory__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[3] in module Weight_Memory__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[2] in module Weight_Memory__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[1] in module Weight_Memory__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port win[0] in module Weight_Memory__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wen in module Weight_Memory__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[9] in module Weight_Memory__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[8] in module Weight_Memory__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[7] in module Weight_Memory__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wadd[6] in module Weight_Memory__parameterized53 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1526.172 ; gain = 583.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1526.172 ; gain = 583.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1526.172 ; gain = 583.234
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.139 . Memory (MB): peak = 1526.172 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.srcs/constrs_1/new/tset_xdc.xdc]
+Finished Parsing XDC File [c:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.srcs/constrs_1/new/tset_xdc.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1626.980 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+지정된 경로를 찾을 수 없습니다.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.171 . Memory (MB): peak = 1626.980 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1626.980 ; gain = 684.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1626.980 ; gain = 684.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1626.980 ; gain = 684.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1626.980 ; gain = 684.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 44    
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 4     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	               80 Bit    Registers := 8     
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 46    
+	               24 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
+	                8 Bit    Registers := 52    
+	                7 Bit    Registers := 24    
+	                6 Bit    Registers := 10    
+	                5 Bit    Registers := 18    
+	                4 Bit    Registers := 5     
+	                1 Bit    Registers := 15    
++---Multipliers : 
+	               1x32  Multipliers := 16    
++---RAMs : 
+	              512 Bit	(64 X 8 bit)          RAMs := 4     
++---ROMs : 
+	                    ROMs := 23    
++---Muxes : 
+	  10 Input   80 Bit        Muxes := 1     
+	   2 Input   80 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 85    
+	  10 Input   32 Bit        Muxes := 7     
+	   2 Input   24 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 34    
+	   8 Input    8 Bit        Muxes := 7     
+	   4 Input    8 Bit        Muxes := 10    
+	   6 Input    8 Bit        Muxes := 4     
+	   9 Input    8 Bit        Muxes := 1     
+	   3 Input    8 Bit        Muxes := 2     
+	 785 Input    8 Bit        Muxes := 7     
+	   2 Input    6 Bit        Muxes := 1     
+	  10 Input    6 Bit        Muxes := 1     
+	  10 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 2     
+	  32 Input    3 Bit        Muxes := 4     
+	   2 Input    3 Bit        Muxes := 1     
+	   9 Input    3 Bit        Muxes := 1     
+	   8 Input    3 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 53    
+	   3 Input    1 Bit        Muxes := 2     
+	  10 Input    1 Bit        Muxes := 13    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:35 ; elapsed = 00:01:41 . Memory (MB): peak = 1626.980 ; gain = 684.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++--------------+------------------------+---------------+----------------+
+|Module Name   | RTL Object             | Depth x Width | Implemented As | 
++--------------+------------------------+---------------+----------------+
+|Weight_Memory | mem                    | 32x7          | LUT            | 
+|Weight_Memory | mem                    | 32x7          | LUT            | 
+|Weight_Memory | mem                    | 32x6          | LUT            | 
+|Weight_Memory | mem                    | 32x7          | LUT            | 
+|Weight_Memory | mem                    | 32x7          | LUT            | 
+|Weight_Memory | mem                    | 32x7          | LUT            | 
+|Weight_Memory | mem                    | 32x7          | LUT            | 
+|Weight_Memory | mem                    | 32x7          | LUT            | 
+|Weight_Memory | mem                    | 32x7          | LUT            | 
+|Weight_Memory | mem                    | 32x6          | LUT            | 
+|Weight_Memory | mem                    | 32x7          | LUT            | 
+|Weight_Memory | mem                    | 32x7          | LUT            | 
+|Weight_Memory | mem                    | 32x7          | LUT            | 
+|Weight_Memory | mem                    | 32x7          | LUT            | 
+|Weight_Memory | mem                    | 32x5          | LUT            | 
+|Weight_Memory | mem                    | 32x6          | LUT            | 
+|Weight_Memory | mem                    | 32x7          | LUT            | 
+|Weight_Memory | mem                    | 32x7          | LUT            | 
+|Weight_Memory | mem                    | 32x7          | LUT            | 
+|Weight_Memory | mem                    | 32x7          | LUT            | 
+|Weight_Memory | mem                    | 32x7          | LUT            | 
+|Weight_Memory | mem                    | 32x7          | LUT            | 
+|Weight_Memory | mem                    | 32x8          | LUT            | 
+|Weight_Memory | mem                    | 32x8          | LUT            | 
+|Weight_Memory | mem                    | 32x7          | LUT            | 
+|Weight_Memory | mem                    | 32x7          | LUT            | 
+|Weight_Memory | mem                    | 32x7          | LUT            | 
+|Weight_Memory | mem                    | 32x7          | LUT            | 
+|Weight_Memory | mem                    | 32x7          | LUT            | 
+|Weight_Memory | mem                    | 32x8          | LUT            | 
+|Weight_Bank   | L1_MEM[29].wm/wout_reg | 1024x6        | Block RAM      | 
+|Weight_Bank   | L1_MEM[28].wm/wout_reg | 1024x6        | Block RAM      | 
+|Weight_Bank   | L1_MEM[27].wm/wout_reg | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[25].wm/wout_reg | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[23].wm/wout_reg | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[22].wm/wout_reg | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[21].wm/wout_reg | 1024x6        | Block RAM      | 
+|Weight_Bank   | L1_MEM[20].wm/wout_reg | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[19].wm/wout_reg | 1024x6        | Block RAM      | 
+|Weight_Bank   | L1_MEM[18].wm/wout_reg | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[17].wm/wout_reg | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[16].wm/wout_reg | 1024x6        | Block RAM      | 
+|Weight_Bank   | L1_MEM[14].wm/wout_reg | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[13].wm/wout_reg | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[12].wm/wout_reg | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[11].wm/wout_reg | 1024x7        | Block RAM      | 
+|Weight_Bank   | L1_MEM[10].wm/wout_reg | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[6].wm/wout_reg  | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[5].wm/wout_reg  | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[4].wm/wout_reg  | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[3].wm/wout_reg  | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[2].wm/wout_reg  | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[1].wm/wout_reg  | 1024x6        | Block RAM      | 
+|Weight_Bank   | p_0_out                | 32x8          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x7          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x7          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x7          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x8          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x8          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x7          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x7          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x7          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x7          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x7          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x6          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x5          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x7          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x7          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x7          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x7          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x6          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x7          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x7          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x7          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x7          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x7          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x7          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x6          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x7          | LUT            | 
+|Weight_Bank   | p_0_out                | 32x7          | LUT            | 
+|Weight_Bank   | L1_MEM[29].wm/wout_reg | 1024x6        | Block RAM      | 
+|Weight_Bank   | L1_MEM[28].wm/wout_reg | 1024x6        | Block RAM      | 
+|Weight_Bank   | L1_MEM[27].wm/wout_reg | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[25].wm/wout_reg | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[23].wm/wout_reg | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[22].wm/wout_reg | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[21].wm/wout_reg | 1024x6        | Block RAM      | 
+|Weight_Bank   | L1_MEM[20].wm/wout_reg | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[19].wm/wout_reg | 1024x6        | Block RAM      | 
+|Weight_Bank   | L1_MEM[18].wm/wout_reg | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[17].wm/wout_reg | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[16].wm/wout_reg | 1024x6        | Block RAM      | 
+|Weight_Bank   | L1_MEM[14].wm/wout_reg | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[13].wm/wout_reg | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[12].wm/wout_reg | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[11].wm/wout_reg | 1024x7        | Block RAM      | 
+|Weight_Bank   | L1_MEM[10].wm/wout_reg | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[6].wm/wout_reg  | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[5].wm/wout_reg  | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[4].wm/wout_reg  | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[3].wm/wout_reg  | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[2].wm/wout_reg  | 1024x5        | Block RAM      | 
+|Weight_Bank   | L1_MEM[1].wm/wout_reg  | 1024x6        | Block RAM      | 
++--------------+------------------------+---------------+----------------+
+
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+-------------------------------------------+-----------+----------------------+---------------+
+|Module Name | RTL Object                                | Inference | Size (Depth x Width) | Primitives    | 
++------------+-------------------------------------------+-----------+----------------------+---------------+
+|NPU_Top     | gb/Global_buf_gen[0].u_global_buf/ram_reg | Implied   | 64 x 8               | RAM64X1S x 8  | 
+|NPU_Top     | gb/Global_buf_gen[1].u_global_buf/ram_reg | Implied   | 64 x 8               | RAM64X1S x 8  | 
+|NPU_Top     | gb/Global_buf_gen[2].u_global_buf/ram_reg | Implied   | 64 x 8               | RAM64X1S x 8  | 
+|NPU_Top     | gb/Global_buf_gen[3].u_global_buf/ram_reg | Implied   | 64 x 8               | RAM64X1S x 8  | 
++------------+-------------------------------------------+-----------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:44 ; elapsed = 00:01:51 . Memory (MB): peak = 1626.980 ; gain = 684.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:47 ; elapsed = 00:01:54 . Memory (MB): peak = 1626.980 ; gain = 684.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+-------------------------------------------+-----------+----------------------+---------------+
+|Module Name | RTL Object                                | Inference | Size (Depth x Width) | Primitives    | 
++------------+-------------------------------------------+-----------+----------------------+---------------+
+|NPU_Top     | gb/Global_buf_gen[0].u_global_buf/ram_reg | Implied   | 64 x 8               | RAM64X1S x 8  | 
+|NPU_Top     | gb/Global_buf_gen[1].u_global_buf/ram_reg | Implied   | 64 x 8               | RAM64X1S x 8  | 
+|NPU_Top     | gb/Global_buf_gen[2].u_global_buf/ram_reg | Implied   | 64 x 8               | RAM64X1S x 8  | 
+|NPU_Top     | gb/Global_buf_gen[3].u_global_buf/ram_reg | Implied   | 64 x 8               | RAM64X1S x 8  | 
++------------+-------------------------------------------+-----------+----------------------+---------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance wb/L1_MEM[29].wm/wout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance wb/L1_MEM[28].wm/wout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance wb/L1_MEM[27].wm/wout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance wb/L1_MEM[25].wm/wout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance wb/L1_MEM[23].wm/wout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance wb/L1_MEM[22].wm/wout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance wb/L1_MEM[21].wm/wout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance wb/L1_MEM[20].wm/wout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance wb/L1_MEM[19].wm/wout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance wb/L1_MEM[18].wm/wout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance wb/L1_MEM[17].wm/wout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance wb/L1_MEM[16].wm/wout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance wb/L1_MEM[14].wm/wout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance wb/L1_MEM[13].wm/wout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance wb/L1_MEM[12].wm/wout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance wb/L1_MEM[11].wm/wout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance wb/L1_MEM[10].wm/wout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance wb/L1_MEM[6].wm/wout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance wb/L1_MEM[5].wm/wout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance wb/L1_MEM[4].wm/wout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance wb/L1_MEM[3].wm/wout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance wb/L1_MEM[2].wm/wout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance wb/L1_MEM[1].wm/wout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:54 ; elapsed = 00:02:01 . Memory (MB): peak = 1626.980 ; gain = 684.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:03 ; elapsed = 00:02:10 . Memory (MB): peak = 1626.980 ; gain = 684.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:03 ; elapsed = 00:02:10 . Memory (MB): peak = 1626.980 ; gain = 684.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:05 ; elapsed = 00:02:12 . Memory (MB): peak = 1626.980 ; gain = 684.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:05 ; elapsed = 00:02:12 . Memory (MB): peak = 1626.980 ; gain = 684.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:05 ; elapsed = 00:02:12 . Memory (MB): peak = 1626.980 ; gain = 684.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:05 ; elapsed = 00:02:12 . Memory (MB): peak = 1626.980 ; gain = 684.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |   611|
+|3     |LUT1     |    72|
+|4     |LUT2     |  1812|
+|5     |LUT3     |   238|
+|6     |LUT4     |   877|
+|7     |LUT5     |   474|
+|8     |LUT6     |  1805|
+|9     |MUXF7    |   269|
+|10    |MUXF8    |   124|
+|11    |RAM64X1S |    32|
+|12    |RAMB18E1 |    23|
+|35    |FDCE     |  1943|
+|36    |FDPE     |     3|
+|37    |FDRE     |   303|
+|38    |IBUF     |    35|
+|39    |OBUF     |    33|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:05 ; elapsed = 00:02:12 . Memory (MB): peak = 1626.980 ; gain = 684.043
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:45 ; elapsed = 00:02:07 . Memory (MB): peak = 1626.980 ; gain = 583.234
+Synthesis Optimization Complete : Time (s): cpu = 00:02:05 ; elapsed = 00:02:12 . Memory (MB): peak = 1626.980 ; gain = 684.043
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.151 . Memory (MB): peak = 1626.980 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1059 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1627.637 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 32 instances were transformed.
+  RAM64X1S => RAM64X1S (RAMS64E): 32 instances
+
+지정된 경로를 찾을 수 없습니다.
+Synth Design complete | Checksum: 347e72b8
+INFO: [Common 17-83] Releasing license: Synthesis
+289 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:16 ; elapsed = 00:02:26 . Memory (MB): peak = 1627.637 ; gain = 1074.855
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1627.637 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'c:/fpga_project/CS_MNIST/CS_MNIST/CS_MNIST.runs/synth_1/NPU_Top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file NPU_Top_utilization_synth.rpt -pb NPU_Top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 17 21:26:05 2026...
